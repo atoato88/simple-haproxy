@@ -1,0 +1,10 @@
+version: '3'
+services:
+  router:
+    #build: .
+    image: haproxy:alpine
+    ports:
+    - "6444:6444"
+    volumes:
+    - ./template/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+
